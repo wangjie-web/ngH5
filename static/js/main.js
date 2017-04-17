@@ -9,6 +9,7 @@ require.config({
 		//"angular-animate":"//cdn.bootcss.com/angular.js/1.3.15/angular-animate.min",
 		'app':"js/app",
 		'common':"js/common",
+		'amap':'//webapi.amap.com/maps?v=1.3&key=8b7a099c7f4364e7f68a9993b770ce94'
 	},
 	shim:{
 		'angular':{
@@ -22,17 +23,21 @@ require.config({
 			deps:['angular-route'],
 			exports: 'angular-animate'
 		},
+		'amap':{
+			exports:'amap'
+		}
 	},
 	// 防止读取缓存，调试用
 	//urlArgs: "bust=" + (new Date()).getTime(),
 	//更新用户缓存一次
-	urlArgs: "bust=" + 6,
+	urlArgs: "bust=" + 3,
 	waitSeconds: 0 
 });
 define(['angular',
 		'angular-route',
 		//'angular-animate',
 		'app',
+		'amap'
 ],function(angular){
 	angular.bootstrap(document,["app"]);
 });
