@@ -10,7 +10,7 @@ define(['common'], function(com) {
 
 				var map = new AMap.Map('container', {
 					resizeEnable: true,
-					zoom: 16,
+					zoom: 12,
 					center: [longitude, latitude]
 				});
 
@@ -22,7 +22,7 @@ define(['common'], function(com) {
 			}, function(e) {
 				alert(e.message + "[code:" + e.code + "]");
 			}, {
-				enableHighAccuracy: false,
+				enableHighAccuracy: true,
 				timeout: 3000,
 				maximumAge: 10 * 1000
 			});
