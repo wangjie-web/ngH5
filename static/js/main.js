@@ -6,7 +6,7 @@ require.config({
 		//"angular":"lib/angular/angular.min", 
 		"angular":"//cdn.bootcss.com/angular.js/1.3.15/angular.min",
 		"angular-route":"//cdn.bootcss.com/angular.js/1.3.15/angular-route.min",
-		"angular-animate":"//cdn.bootcss.com/angular.js/1.3.15/angular-animate.min",
+		//"angular-animate":"//cdn.bootcss.com/angular.js/1.3.15/angular-animate.min",
 		'app':"js/app",
 		'common':"js/common",
 	},
@@ -31,7 +31,7 @@ require.config({
 });
 define(['angular',
 		'angular-route',
-		'angular-animate',
+		//'angular-animate',
 		'app',
 ],function(angular){
 	angular.bootstrap(document,["app"]);

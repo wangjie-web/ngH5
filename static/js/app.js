@@ -1,6 +1,6 @@
 define(['angular'], function(angular) {
 	var controllerProvider = null;
-	var module = angular.module("app", ["ngRoute","ngAnimate"], function($controllerProvider) {
+	var module = angular.module("app", ["ngRoute"], function($controllerProvider) {
 		controllerProvider = $controllerProvider;
 	});
 	//分页模版

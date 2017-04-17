@@ -16,6 +16,7 @@
 				b.addEventListener && (d = "orientationchange" in a ? "orientationchange" : "resize", a.addEventListener(d, c, !1), b.addEventListener("DOMContentLoaded", c, !1), c())
 			}(window, document);
 		</script>
+		<!--
 		<style>
 			/* leaving animations ----------------------------------------- */
 			/* rotate and fall */
@@ -109,12 +110,13 @@
 				z-index: 9999;
 			}
 		</style>
+		-->
 	</head>
 
 	<body>
 		<div class="ng-cloak" ng-controller="app">
 			<!--<div>公共头</div>-->
-			<div class="{{pageAnimate}}" ng-view></div>
+			<div ng-view></div>
 			<!--<div>公共尾</div>-->
 		</div>
 
