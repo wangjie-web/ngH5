@@ -10,9 +10,17 @@ define(['common'], function(com) {
 
 				var map = new AMap.Map('container', {
 					resizeEnable: true,
-					zoom: 12,
+					zoom: 16,
 					center: [longitude, latitude]
 				});
+				
+				var marker = new AMap.Marker({
+			        icon : 'http://vdata.amap.com/icons/b18/1/2.png',//24px*24px
+			        position : [longitude, latitude],
+			        offset : new AMap.Pixel(-12,-12),
+			        map : map
+				});
+				
 
 				AMap.plugin(['AMap.ToolBar', 'AMap.Scale'], function() {
 					map.addControl(new AMap.ToolBar());
