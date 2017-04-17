@@ -1,0 +1,123 @@
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<script data-main="../static/js/main.js" src="//cdn.bootcss.com/require.js/2.1.20/require.min.js"></script>
+		<link rel="stylesheet" href="../static/css/commonying.css">
+		<script type="text/javascript">
+			! function(a, b) {
+				var d, c = function() {
+					var a = 32,
+						c = b.documentElement,
+						d = c.clientWidth;
+					d && (c.style.fontSize = a * (d / 320) + "px")
+				};
+				b.addEventListener && (d = "orientationchange" in a ? "orientationchange" : "resize", a.addEventListener(d, c, !1), b.addEventListener("DOMContentLoaded", c, !1), c())
+			}(window, document);
+		</script>
+		<style>
+			/* leaving animations ----------------------------------------- */
+			/* rotate and fall */
+			
+			@keyframes rotateFall {
+				0% {
+					transform: rotateZ(0deg);
+				}
+				20% {
+					transform: rotateZ(10deg);
+					animation-timing-function: ease-out;
+				}
+				40% {
+					transform: rotateZ(17deg);
+				}
+				60% {
+					transform: rotateZ(16deg);
+				}
+				100% {
+					transform: translateY(100%) rotateZ(17deg);
+				}
+			}
+			
+			/* rotate out newspaper */
+			
+			@keyframes rotateOutNewspaper {
+				to {
+					transform: translateZ(-3000px) rotateZ(360deg);
+					opacity: 0;
+				}
+			}
+			/* entering animations --------------------------------------- */
+			/* scale up */
+			
+			@keyframes scaleUp {
+				from {
+					opacity: 0.3;
+					-webkit-transform: scale(0.8);
+				}
+			}
+			
+			/* slide in from the bottom */
+			
+			@keyframes slideOutRight {
+				to {
+					opacity: 0;
+					/*transform: translateX(100%);*/
+				}
+			}
+			
+			/* slide in from the right */
+			
+			@keyframes slideInRight {
+				from {
+					opacity: 0;
+					/*transform: translateX(100%);*/
+				}
+				to {
+					opacity: 1;
+					/*transform: translateX(0);*/
+				}
+			}
+			/* slide in from the bottom */
+			
+			@keyframes slideInUp {
+				from {
+					transform: translateY(100%);
+				}
+				to {
+					transform: translateY(0);
+				}
+			}
+			
+			.ng-enter {
+				animation: slideInRight 0.3s both ease-in;
+				z-index: 8888;
+			}
+			
+			.ng-leave {
+				animation: slideOutRight 0.3s both ease-in;
+				z-index: 9999;
+			}
+			
+			.ng-enter.OFF {
+				animation: none;
+				z-index: 8888;
+			}
+			
+			.ng-leave.OFF {
+				animation: none;
+				z-index: 9999;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="ng-cloak" ng-controller="app">
+			<!--<div>公共头</div>-->
+			<div class="{{pageAnimate}}" ng-view></div>
+			<!--<div>公共尾</div>-->
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>demo</title>
+<link rel="stylesheet" href="commonying.css">
+	<script type="text/javascript">!function(a,b){var d,c=function(){var a=32,c=b.documentElement,d=c.clientWidth;d&&(c.style.fontSize=a*(d/320)+"px")};b.addEventListener&&(d="orientationchange"in a?"orientationchange":"resize",a.addEventListener(d,c,!1),b.addEventListener("DOMContentLoaded",c,!1),c())}(window,document);</script>
+
+<style>
+#a{height:100px;background:red;}
+#b{padding-top:10px;}
+#c{position:absolute;bottom:0;right:0;}
+
+
+.xb-flex-demo{height:42px;}
+.xb-flex-ver-demo{height:120px;}
+</style>
+</head>
+<body class="xb-wrap PH-15 PB-20" ontouchstart>
+	<h2 class="PT-20">文本大小</h2>
+	<div>
+		<div class="FS-12">FS-12</div>
+		<div class="FS-14">FS-14</div>
+		<div class="FS-16">FS-16</div>
+		<div class="FS-18">FS-18</div>
+		<div class="FS-20">FS-20</div>
+	</div>
+	<h2 class="PV-20">文本颜色</h2>
+	<div>
+		<div class="FC-red">FC-red</div>
+		<div class="FC-blue">FC-blue</div>
+		<div class="FC-green">FC-green</div>
+		<a href="#">链接,要大要突出要看得见触觉反馈</a>
+		<div class="FC-white BG-black">FC-white</div>
+		<div class="FC-black">FC-black</div>
+		<div class="FC-gray">FC-gray</div>
+		<div class="FC-lightGray">FC-lightGray</div>
+		<div class="FC-darkGray">FC-darkGray</div>
+	</div>
+	<h2 class="PT-10 PB-20">文字布局</h2>
+	<div>
+		<div class="txt-l">txt-l</div>
+		<div class="txt-c">txt-c</div>
+		<div class="txt-r">txt-r</div>
+	</div>
+	<h2 class="PV-20">背景颜色</h2>
+	<div class="FC-white">
+		<div class="BG-white FC-black">BG-white</div>
+		<div class="BG-red">BG-red</div>
+		<div class="BG-yellow">BG-yellow</div>
+		<div class="BG-green">BG-green</div>
+		<div class="BG-blue">BG-blue</div>
+		<div class="BG-darkGray">BG-darkGray</div>
+		<div class="BG-gray">BG-gray</div>
+		<div class="BG-black">BG-black</div>
+	</div>
+	<h2 class="PV-20">含触觉反馈的背景色</h2>
+	<div class="FC-white">
+		<div class="BG-red action">BG-red,action</div>
+		<div class="BG-yellow action">BG-yellow,action</div>
+		<div class="BG-green action">BG-green,action</div>
+		<div class="BG-gray action">BG-gray,action</div>
+	</div>
+	<h2 class="PV-20">flex布局(default:横向)</h2>
+	<div class="FC-white">
+		<div class="xb BG-red">
+			<div class="BG-gray FS-12">左</div>
+			<div class="BG-darkGray" style="font-size: 12px;">左</div>
+		</div>
+		<div class="xb xb-pc BG-yellow">
+			<div class="BG-gray FS-14">中</div>
+			<div class="BG-darkGray" style="font-size: 14px;">中</div>
+		</div>
+		<div class="xb xb-pe BG-blue">
+			<div class="BG-gray FS-16">右</div>
+			<div class="BG-darkGray" style="font-size: 16px;">右</div>
+		</div>
+		<div class="xb BG-red">
+			<div class="BG-gray FS-18">上</div>
+			<div class="BG-darkGray" style="font-size: 18px;">上</div>
+		</div>
+		<div class="xb-flex-demo xb xb-ac BG-yellow">
+			<div class="BG-gray FS-20">中</div>
+			<div class="BG-darkGray" style="font-size: 20px;">中</div>
+		</div>
+		<div class="xb-flex-demo xb xb-ae BG-blue">
+			<div class="BG-gray">下</div>
+			<div class="BG-darkGray">下</div>
+		</div>
+	</div>
+	<h2 class="PV-20">flex布局(纵向)</h2>
+	<ul class="FC-white">
+		<li class="xb xb-ver BG-red">
+			<div class="BG-gray">左</div>
+			<div class="BG-darkGray">左</div>
+		</li>
+		<li class="xb xb-ver xb-ac BG-yellow">
+			<div class="BG-gray">中</div>
+			<div class="BG-darkGray">中</div>
+		</li>
+		<li class="xb xb-ver xb-ae BG-blue">
+			<div class="BG-gray">右</div>
+			<div class="BG-darkGray">右</div>
+		</li>
+	</ul>
+	<h2 class="PV-20">flex布局(全居中)</h2>
+	<div class="xb xb-allc xb-flex-demo BG-red FC-white">
+		xb-allc
+	</div>
+
+	<h2 class="PV-20">flex网格(横向)</h2>
+	<div class="xb xb-ver FC-white">
+		<div class="xb MB-10">
+			<div class="xb xb-pc xb-f1 BG-red">平均分</div>
+			<div class="xb xb-pc xb-f1 BG-yellow">平均分</div>
+			<div class="xb xb-pc xb-f1 BG-green">平均分</div>
+			<div class="xb xb-pc xb-f1 BG-blue">平均分</div>
+		</div>
+		<div class="xb MV-10">
+			<div class="xb xb-pc xb-f2 BG-gray">2/5</div>
+			<div class="xb xb-pc xb-f3 BG-darkGray">3/5</div>
+		</div>
+		<div class="xb MV-10">
+			<div class="xb xb-pc xb-f3 BG-gray">3/4</div>
+			<div class="xb xb-pc xb-f1 BG-darkGray">1/4</div>
+		</div>
+		<div class="xb MV-10">
+			<div class="xb xb-pc xb-f4 BG-gray">4/5</div>
+			<div class="xb xb-pc xb-f1 BG-darkGray">1/5</div>
+		</div>
+		<div class="xb MV-10">
+			<div class="xb xb-pc xb-f3 BG-gray">3/5</div>
+			<div class="xb xb-pc xb-f2 BG-darkGray">2/5</div>
+		</div>
+	</div>
+	<h2 class="PV-20">flex网格(纵向)</h2>
+	<div class="xb xb-ver FC-white">
+		<div class="xb xb-ver MB-10 xb-flex-ver-demo">
+			<div class="xb xb-allc xb-f1 BG-red">平均分</div>
+			<div class="xb xb-allc xb-f1 BG-yellow">平均分</div>
+			<div class="xb xb-allc xb-f1 BG-green">平均分</div>
+			<div class="xb xb-allc xb-f1 BG-blue">平均分</div>
+		</div>
+		<div class="xb MV-10">
+			<div class="xb xb-ver xb-f1 MR-10 xb-flex-ver-demo">
+				<div class="xb xb-allc xb-f2 BG-gray">2/5</div>
+				<div class="xb xb-allc xb-f3 BG-darkGray">3/5</div>
+			</div>
+			<div class="xb xb-ver xb-f1 xb-flex-ver-demo">
+				<div class="xb xb-allc xb-f3 BG-gray">3/4</div>
+				<div class="xb xb-allc xb-f1 BG-darkGray">1/4</div>
+			</div>
+		</div>
+		<div class="xb MV-10">
+			<div class="xb xb-ver xb-f1 MR-10 xb-flex-ver-demo">
+				<div class="xb xb-allc xb-f4 BG-gray">4/5</div>
+				<div class="xb xb-allc xb-f1 BG-darkGray">1/5</div>
+			</div>
+			<div class="xb xb-ver xb-f1 xb-flex-ver-demo">
+				<div class="xb xb-allc xb-f3 BG-gray">3/5</div>
+				<div class="xb xb-allc xb-f2 BG-darkGray">2/5</div>
+			</div>
+		</div>
+	</div>
+	<h2 class="PV-20">1px边框</h2>
+	<div class="xb xb-ver">
+		<div class="xb xb-b1 xb-pc PV-10 MB-10">全边框(xb-b1)</div>
+		<div class="xb xb-bv1 xb-pc PV-10 MB-10">上下边框(xb-bv1)</div>
+		<div class="xb xb-bt1 xb-pc PV-10 MB-10">上边框(xb-bt1)</div>
+		<div class="xb xb-bb1 xb-pc PV-10 MB-10">下边框(xb-bb1)</div>
+		<div class="xb xb-pc PV-10 MB-10">左右边框(无)</div>
+		<div class="xb xb-bl1 xb-pc PV-10 MB-10">左边框(xb-bl1)</div>
+		<div class="xb xb-br1 xb-pc PV-10 MB-10">右边框(xb-br1)</div>
+		<div class="xb xb-b1-r4 xb-pc PV-10 MB-10">全边框4px(xb-b1-r4)</div>
+	</div>
+</body>
+</html>
