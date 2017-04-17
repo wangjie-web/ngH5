@@ -2,13 +2,6 @@ define(['common'], function(com) {
 
 	com.controller("app", ['$scope', '$timeout', function($scope, $timeout) {
 
-		if(navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(function(e){
-				alert(JSON.stringify(e))
-			});
-		} else {
-			alert("Geolocation is not supported by this browser.");
-		}
 
 		$scope.$on("$viewContentLoaded", function() {
 			//console.log("$viewContentLoaded")

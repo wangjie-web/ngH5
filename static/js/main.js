@@ -26,7 +26,7 @@ require.config({
 	// 防止读取缓存，调试用
 	//urlArgs: "bust=" + (new Date()).getTime(),
 	//更新用户缓存一次
-	urlArgs: "bust=" + 2,
+	urlArgs: "bust=" + 3,
 	waitSeconds: 0 
 });
 define(['angular',
