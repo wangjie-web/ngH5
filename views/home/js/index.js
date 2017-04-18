@@ -2,7 +2,7 @@ define(['common'], function(com) {
 
 	com.controller("home_index", ['$scope', '$timeout', function($scope, $timeout) {
 
-		window.initAmap = function() {
+		require(['amap'], function() {
 
 			var map, geolocation;
 			//加载地图，调用浏览器定位服务
@@ -42,9 +42,7 @@ define(['common'], function(com) {
 				//document.getElementById('tip').innerHTML = '定位失败';
 			}
 
-		}
-		
-		require(['amap'])
+		})
 
 		console.log("home_index")
 
