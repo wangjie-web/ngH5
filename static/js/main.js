@@ -9,7 +9,7 @@ require.config({
 		//"angular-animate":"//cdn.bootcss.com/angular.js/1.3.15/angular-animate.min",
 		'app':"js/app",
 		'common':"js/common",
-		'amap':'//webapi.amap.com/maps?v=1.3&key=8b7a099c7f4364e7f68a9993b770ce94'
+		'amap':'//webapi.amap.com/maps?v=1.3&key=8b7a099c7f4364e7f68a9993b770ce94&callback=initAmap'
 	},
 	shim:{
 		'angular':{
