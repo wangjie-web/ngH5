@@ -19,10 +19,10 @@ require.config({
 			deps:['angular'],
 			exports: 'angular-route'
 		},
-		'angular-animate':{
+		/*'angular-animate':{
 			deps:['angular-route'],
 			exports: 'angular-animate'
-		}
+		}*/
 	},
 	//防止读取缓存，调试用
 	//urlArgs: "bust=" + (new Date()).getTime(),
