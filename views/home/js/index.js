@@ -11,9 +11,10 @@ define(['common'], function(com) {
 		},500)
 
 		require(['amap'], function() {
-
+			var AMapRuning = false;
 			window.initAmap = function() {
-
+				if(AMapRuning) return false;
+				AMapRuning = true;
 				var map, geolocation;
 				//加载地图，调用浏览器定位服务
 				map = new AMap.Map('container', {
@@ -30,12 +31,16 @@ define(['common'], function(com) {
 					});
 					map.addControl(geolocation);
 					geolocation.getCurrentPosition();
+					geolocation.getCityInfo(function(status,result){
+						console.log(status)
+						console.log(result)
+					});
 					AMap.event.addListener(geolocation, 'complete', onComplete); //返回定位信息
 					AMap.event.addListener(geolocation, 'error', onError); //返回定位出错信息
 				});
 				//解析定位结果
 				function onComplete(data) {
-					console.log(data);
+					//console.log(data);
 					/*
 					var str = ['定位成功'];
 					str.push('经度：' + data.position.getLng());
@@ -49,13 +54,15 @@ define(['common'], function(com) {
 				}
 				//解析定位错误信息
 				function onError(data) {
-					console.log(data)
+					//console.log(data)
 					//document.getElementById('tip').innerHTML = '定位失败';
 				}
 
 			}
 			
-			if(AMap && AMap.Map) initAmap();
+			if(AMap && AMap.Map) {
+				initAmap();
+			}
 
 		})
 
