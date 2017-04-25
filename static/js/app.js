@@ -45,6 +45,13 @@ define(['angular'], function(angular) {
 					controllerSrc: 'home/js/content.js'
 				})
 			)
+			.when('/amap_province',
+				asNeededConfig({
+					templateUrl: 'amap/province.html',
+					controller: 'amap_province',
+					controllerSrc: 'amap/js/province.js'
+				})
+			)
 			.when('/home_index', {
 				templateUrl: 'home/index.html',
 				controller: 'home_index'

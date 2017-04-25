@@ -1,5 +1,15 @@
 define(['angular', 'app'], function(angular, app) {
+	var d = document;
 	window.$$ = {
+		cssload: {
+			es:d.getElementById("_cssload").style,
+			hide:function(){
+				$$.cssload.es.display = "none";
+			},
+			show:function(){
+				$$.cssload.es.display = "block";
+			}
+		},
 		getHtml: function(url) {
 			var html = '';
 //			$.ajax({

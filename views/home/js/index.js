@@ -2,9 +2,12 @@ define(['common'], function(com) {
 
 	com.controller("home_index", ['$scope', '$timeout', function($scope, $timeout) {
 		
+		$$.cssload.show();
+		
 		$timeout(function(){
 			$scope.src = "//img3.utuku.china.com/440x0/news/20170424/4f930265-df74-4c16-8752-9ed25f959e60.jpg";
 			$scope.content = '三等奖福克斯的几分快乐,三等奖福克斯的几分快乐,三等奖福克斯的几分快乐,三等奖福克斯的几分快乐,三等奖福克斯的几分快乐,三等奖福克斯的几分快乐,三等奖福克斯的几分快乐,三等奖福克斯的几分快乐,三等奖福克斯的几分快乐,';
+			$$.cssload.hide();
 		},500)
 
 		require(['amap'], function() {
